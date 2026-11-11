@@ -37,15 +37,15 @@ class Fixed
         Fixed& operator--();//--a
         Fixed operator--(int);//a--;
 
-        static Fixed& min(Fixed& x, Fixed& y);
-        static Fixed& min(const Fixed& x, const Fixed& y);
-        static Fixed& max(Fixed& x, Fixed& y);
-        static Fixed& max(const Fixed& x, const Fixed& y);
-
         float toFloat(void) const;
         int toInt(void) const;
         int getRawBits(void) const;
         void setRawBits(int const raw);
+        ///static overload member function
+        static Fixed& min(Fixed& x, Fixed& y);
+        static const Fixed& min(const Fixed& x, const Fixed& y);
+        static Fixed& max(Fixed& x, Fixed& y);
+        static const Fixed& max(const Fixed& x, const Fixed& y);
 };
 ///this is overload of operator
 std::ostream& operator<<(std::ostream& out, const Fixed& fixed);

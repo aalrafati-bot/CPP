@@ -1,33 +1,38 @@
 #include "Fixed.hpp"
 #include <cmath>
 
-Fixed::Fixed() : fixedPoint(0){}
+Fixed::Fixed() : fixedPoint(0) {}
 
 Fixed::Fixed(const int integer)
 {
     ///shift for left 8 bits(from int to fix point num)
     this->fixedPoint = integer << fractionalBits;
+    std::cout << "Int constructor called" << std::endl;
 }
 
 Fixed::Fixed(const float floatt)
 {
     ////we * the float num to 256 i don't know why(from float to fix point num)
     this->fixedPoint = (int)roundf(floatt * (1 << fractionalBits));
+    std::cout << "Float constructor called" << std::endl;
 }
 
-Fixed::Fixed(const Fixed& other)  : fixedPoint(other.fixedPoint){}
+Fixed::Fixed(const Fixed& other)  : fixedPoint(other.fixedPoint)
+{
+    std::cout << "Copy constructor called" << std::endl;///b(a)
+}
 
 ///c = b;
 Fixed& Fixed::operator = (const Fixed& other)
 {
     if (this != &other)/// so save us from c = c
         this->fixedPoint = other.fixedPoint;
+    std::cout << "Copy assignment operator called" << std::endl;
     return (*this);////cause we want the value
 }
 
 Fixed::~Fixed()
 {
-
 }
 
 float Fixed::toFloat(void) const
