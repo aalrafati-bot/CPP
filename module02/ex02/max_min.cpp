@@ -1,21 +1,42 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   max_min.cpp                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aalrofat <aalrofat@student.42amman.com>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/11/12 11:53:50 by aalrofat          #+#    #+#             */
+/*   Updated: 2026/11/12 11:53:50 by aalrofat         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Fixed.hpp"
 
-static Fixed& Fixed::min(Fixed& x, Fixed& y)
+Fixed& Fixed::min(Fixed& x, Fixed& y)
 {
+	if (x < y)
+		return (x);
+	return (y);
 
 }
 
-static const Fixed& Fixed::min(const Fixed& x, const Fixed& y)
+const Fixed& Fixed::min(const Fixed& x, const Fixed& y)
 {
-
+	if (x < y)
+		return (x);
+	return (y);
 }
 
-static Fixed& Fixed::max(Fixed& x, Fixed& y)
+Fixed& Fixed::max(Fixed& x, Fixed& y)
 {
-    
+	if (x > y)
+		return (x);
+	return (y);
 }
 
-static const Fixed& Fixed::max(const Fixed& x, const Fixed& y)
+const Fixed& Fixed::max(const Fixed& x, const Fixed& y)
 {
-
+	if (x > y)
+		return (x);
+	return (y);
 }

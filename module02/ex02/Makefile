@@ -1,6 +1,18 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: aalrofat <aalrofat@student.42amman.com>    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2026/11/12 11:53:43 by aalrofat          #+#    #+#              #
+#    Updated: 2026/11/12 11:53:43 by aalrofat         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
-SRC = main.cpp Fixed.cpp
+SRC = main.cpp Fixed.cpp incrementdecrement.cpp mathandcomparison.cpp max_min.cpp
 OBJ = $(SRC:.cpp=.o)
 NAME = fixed
 
