@@ -33,7 +33,7 @@ Fixed& Fixed::max(Fixed& x, Fixed& y)
 		return (x);
 	return (y);
 }
-// we call it using the name of class Fixed::max
+// we call it using the name of class Fixed::max cause its static 
 const Fixed& Fixed::max(const Fixed& x, const Fixed& y)
 {
 	if (x > y)

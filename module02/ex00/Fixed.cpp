@@ -24,7 +24,7 @@ Fixed::Fixed(const Fixed& other)  : fixedPoint(other.fixedPoint)
 }
 
 ///c = b;
-Fixed& Fixed::operator = (const Fixed& other)
+Fixed& Fixed::operator=(const Fixed& other)
 {
     if (this != &other)/// so save us from c = c
         this->fixedPoint = other.fixedPoint;

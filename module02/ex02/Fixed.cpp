@@ -34,7 +34,6 @@ Fixed& Fixed::operator = (const Fixed& other)
 {
     if (this != &other)/// so save us from c = c
         this->fixedPoint = other.fixedPoint;
-    std::cout << "Copy assignment operator called" << std::endl;
     return (*this);////cause we want the value
 }
 
@@ -58,7 +57,6 @@ void Fixed::setRawBits(int const raw)
 
 int Fixed::getRawBits(void) const
 {
-    std::cout << "getRawBits member function called" << std::endl;
     return(this->fixedPoint);
 }
 
